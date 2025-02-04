@@ -9,6 +9,17 @@ git clone --recurse-submodules https://github.com/max-bubula/ca-full-stack.git
 ```
 
 
+## Required Environment Variables
+
+Make sure to set the following environment variables in your shell before running the application:
+
+### Frontend
+- `VITE_GOOGLE_CLIENT_ID=<your_google_client_id>`
+
+### Backend
+- `YOUTUBE_API_KEY=<your_youtube_api_key>`
+
+Ensure that all environment variables are set correctly to avoid any issues while running the application.
 
 ## Running the Application
 
@@ -29,14 +40,3 @@ The following services will be started:
 - **Analysis Service**: Processes data and connects to the monitoring service.
 - **Analysis Service Monitoring**: Monitors the analysis service.
 
-## Required Environment Variables
-
-Make sure to set the following environment variables in your shell before running the application:
-
-### Frontend
-- `VITE_GOOGLE_CLIENT_ID=<your_google_client_id>`
-
-### Backend
-- `YOUTUBE_API_KEY=<your_youtube_api_key>`
-
-Ensure that all environment variables are set correctly to avoid any issues while running the application.
