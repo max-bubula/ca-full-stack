@@ -1,0 +1,12 @@
+[submodule "ca-app-db"]
+	path = ca-app-db
+	url = git@github.com:ciembro/ca-app-db.git
+[submodule "ca-service-analysis"]
+	path = ca-service-analysis
+	url = git@github.com:max-bubula/ca-service-analysis.git
+[submodule "comment-analysis"]
+	path = comment-analysis
+	url = git@github.com:ciembro/comment-analysis.git
+[submodule "comment-analysis-frontend"]
+	path = comment-analysis-frontend
+	url = git@github.com:ciembro/comment-analysis-frontend.git
