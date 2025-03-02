@@ -29,6 +29,7 @@ services:
       - db
     
   db:
+    container_name: ca-db
     image: postgres:17.2-alpine
     environment:
       - POSTGRES_DB=ca-app
@@ -38,6 +39,7 @@ services:
       - pgdata:/var/lib/postgresql/data
   
   flyway-migration:
+    container_name: ca-flyway-migration
     image: flyway/flyway
     command: -url=jdbc:postgresql://db/ca-app -user=postgres -password=postgres -connectRetries=60 migrate
     volumes:
@@ -58,6 +60,7 @@ services:
       - VLLM_HOST=localhost
       - VLLM_PORT=8080
       - PREFECT_API_URL=http://analysis-service-monitoring:4200/api
+      - LOGURU_LEVEL=WARNING
     depends_on:
       - analysis-service-monitoring
       - db
@@ -71,7 +74,7 @@ services:
     volumes:
       - prefect-data:/root/.prefect/
     healthcheck:
-      test: curl --fail http://localhost:4200/api
+      test: curl --fail http://localhost:4200/api/health
       interval: 1m30s
       timeout: 30s
       retries: 5
