@@ -41,7 +41,8 @@ docker compose up --build
 
 ## Adding commands
 
-To add new commands e.g. run test in all repositories add to `justfile` new command, docs: https://just.systems/man/en/
+To add new commands e.g. run test in all repositories add to `justfile` new command.
+Just docs: https://just.systems/man/en/
 
 ## Services
 
