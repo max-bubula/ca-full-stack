@@ -10,4 +10,4 @@ update:
     cd comment-analysis && git pull
     cd comment-analysis-frontend && git pull
 
-udpate_and_run: update run
+update_and_run: update run
