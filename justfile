@@ -4,6 +4,9 @@ default:
 stop:
     docker compose down
 
+remove_db:
+    docker compose down -v
+
 run:
     docker compose up --build
 

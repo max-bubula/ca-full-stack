@@ -65,6 +65,7 @@ services:
       - VLLM_PORT=9000
       - PREFECT_API_URL=http://analysis-service-monitoring:4200/api
       - LOGURU_LEVEL=WARNING
+      - MOCK_ANALYSIS=0
     depends_on:
       # - analysis-service-monitoring
       - db
